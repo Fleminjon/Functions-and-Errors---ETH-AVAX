@@ -17,11 +17,30 @@ This is a smart contract written in solidity that demonstrate the use of the fun
 
 ### Executing program
 
-* Once you are on the website, import the .sol there.
-* To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to whatever compatible version is written on the top of the .sol code, and then click on the "Compile ErrorHandling.sol" button.
-* Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "MyContract" contract from the dropdown menu, and then click on the "Deploy" button.
-* On the deployed contracts, you can see the functions included.
-* You may test the functions by adding any value for the user input.
+Open Remix IDE: Go to Remix IDE.
+
+
+In the "File Explorers" section, click on the "contracts" folder.
+Click on the "+" icon to create a new file.
+Name the file HandleMyError.sol.
+Copy and Paste the Code:
+
+Copy the provided Solidity code and paste it into HandleMyError.sol.
+Compile the Contract:
+
+Click on the "Solidity Compiler" icon.
+Select the compiler version 0.8.0 or a compatible version.
+Click "Compile HandleMyError.sol".
+Deploy the Contract:
+
+Click on the "Deploy & Run Transactions" icon.
+Ensure the environment is set to "JavaScript VM".
+Select HandleMyError from the "Contract" dropdown.
+Click "Deploy".
+Interact with the Deployed Contract:
+
+Expand the deployed contract to see the available functions.
+Test the functions by inputting values and observing the behavior.
 
 ## License
 
