@@ -1,30 +1,34 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract ErrorHandling {
+contract HandleMyError {
+    string public message = "REal or FakE";
     uint256 public value;
 
-    // Function to set a value, require statement ensures value is greater than 0
-    function ValueSetter(uint256 _value) public {
-        require(_value > 0, "Value must be greater than 0");
+    
+    function REquiring(uint _value) public {
+        require(_value > 18, "Value illegal, must be greater than 18");
         value = _value;
     }
 
-    // Function uses require statemnt to check if value is less than a specified threshold
-    function ValueChecker(uint256 _threshold) public view {
-        require(value < _threshold, "Value is not less than the given value");
+
+     function Reverting(uint _value) public {
+        if (_value <= 18) {
+            revert("Value reverted because illegal, must be greater than 18");
+        }
+        message = "Reverted";
+    }
+    function Checker(uint _value) public {
+        assert(_value != 17);
+        message = "Value is legal, Assertion needs are met";
+    }
+    function Adder(uint256 amount) public {
+        require(amount > 18, "Value illegal, must be greater than 18");
+        value += amount;
+
     }
 
-    // Function to assert that the current value is not zero
-    function Assert() public view {
-        assert(value != 0);
-    }
-
-    // Function to demonstrate an error using revert
-    function simulateError() public pure {
-        uint256 a = 1;
-        uint256 b = 0;
-        uint256 c = a / b; // This will cause a divide by zero error
-        revert("Simulated internal error");
+    function CallMessage() public {
+        message = "This is an additional function tests my Callmessage function"; 
     }
 }
