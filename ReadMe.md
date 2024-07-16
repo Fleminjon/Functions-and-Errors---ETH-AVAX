@@ -39,8 +39,20 @@ Select HandleMyError from the "Contract" dropdown.
 Click "Deploy".
 Interact with the Deployed Contract:
 
-Expand the deployed contract to see the available functions.
-Test the functions by inputting values and observing the behavior.
+setEven Function
+Purpose: Sets the value if it is an even number.
+
+setNotByFive Function
+Purpose: Sets the value if it is not a multiple of 5.
+
+PlusAssert Function
+Purpose: Adds the input value to the current value and asserts that the new value exceeds a threshold.
+
+Remove Function
+Purpose: Subtracts an amount from the current value with a require check.
+
+changeMessage Function
+Purpose: Changes the message to a new string.
 
 ## License
 
